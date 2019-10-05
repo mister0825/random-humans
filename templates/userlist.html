@@ -1,0 +1,42 @@
+<!doctype html>
+<head>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
+
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" 
+	
+</head>
+
+<style>
+	.jumbotron {
+		background-color: #9aa6b1;
+		color: #ffffff;
+	}
+</style>
+
+<div class="jumbotron text-center">
+	<h1>Random Human List</h1>
+</div>
+
+<table class="table table-striped">
+	<thead class="thead-dark">
+		<tr>
+			<th scope="col">User ID</th>
+			<th scope="col">Last Name</th> 
+			<th scope="col">First Name</th>
+		</tr>
+	</thead>
+	<tbody>
+		{% for row in result %}
+			<tr>
+			{% for d in row %}
+				<td>{{ d }}</td>
+			{% endfor %}
+			</tr>
+		{% endfor %}
+	</tbody>
+</table>
