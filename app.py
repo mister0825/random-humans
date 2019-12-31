@@ -18,9 +18,10 @@ def index():
 			first_name = full_name.split()[0]
 			last_name = full_name.split()[1]
 			uid = full_name.lower().replace(" ", ".")
+			email = "{}@example.com".format(uid)
 
 		# Create tuple with user elements
-			user = (uid, first_name, last_name)
+			user = (uid, first_name, last_name, email)
 
 		# Append entry elements to data store
 			ds.append(user)
