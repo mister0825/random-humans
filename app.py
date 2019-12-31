@@ -1,4 +1,5 @@
 import names
+import random
 from flask import Flask, render_template
 from flask_bootstrap import Bootstrap
 
@@ -18,10 +19,11 @@ def index():
 			first_name = full_name.split()[0]
 			last_name = full_name.split()[1]
 			uid = full_name.lower().replace(" ", ".")
+			employee_number = random.randint(5000, 10000)
 			email = "{}@example.com".format(uid)
 
 		# Create tuple with user elements
-			user = (uid, first_name, last_name, email)
+			user = (employee_number, uid, first_name, last_name, email)
 
 		# Append entry elements to data store
 			ds.append(user)
